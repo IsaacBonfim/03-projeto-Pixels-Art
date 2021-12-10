@@ -1,5 +1,5 @@
-/* 
-CSS HEX 
+/*
+CSS HEX
 --usafa-blue: #26547cff;
 --paradise-pink: #ef476fff;
 --orange-yellow-crayola: #ffd166ff;
@@ -7,7 +7,7 @@ CSS HEX
 --baby-powder: #fffcf9ff;
 
 font-family: 'Fuzzy Bubbles', cursive;
-font-family: 'Smooch', cursive; 
+font-family: 'Smooch', cursive;
 
 1366 x 768 */
 
@@ -96,7 +96,7 @@ h4 {
 
 .color {
   display: inline-block;
-  padding: 25px;  
+  padding: 25px;
   border-style: solid;
   border-width: 1px;
   margin-right: 10px;
@@ -105,7 +105,7 @@ h4 {
 
 li.color:nth-of-type( 1 ) {
   background-color: #000;
-  box-shadow:
+  box-shadow: 
     -3px -3px 3px #000,
     -3px 3px 3px #000,
     3px -3px 3px #000,
@@ -114,7 +114,7 @@ li.color:nth-of-type( 1 ) {
 
 li.color:nth-of-type( 2 ) {
   background-color: #26547cff;
-  box-shadow:
+  box-shadow: 
     -3px -3px 3px #26547cff,
     -3px 3px 3px #26547cff,
     3px -3px 3px #26547cff,
@@ -123,7 +123,7 @@ li.color:nth-of-type( 2 ) {
 
 li.color:nth-of-type( 3 ) {
   background-color: #ef476fff;
-  box-shadow:
+  box-shadow: 
     -3px -3px 3px #ef476fff,
     -3px 3px 3px #ef476fff,
     3px -3px 3px #ef476fff,
@@ -132,7 +132,7 @@ li.color:nth-of-type( 3 ) {
 
 li.color:nth-of-type( 4 ) {
   background-color: #ffd166ff;
-  box-shadow:
+  box-shadow: 
     -3px -3px 3px #ffd166ff,
     -3px 3px 3px #ffd166ff,
     3px -3px 3px #ffd166ff,
@@ -141,10 +141,11 @@ li.color:nth-of-type( 4 ) {
 
 /* li.color:nth-of-type( 5 ) {
   background-color: #06d6a0ff;
-  box-shadow: -3px -3px 3px #06d6a0ff,
-              -3px  3px 3px #06d6a0ff,
-               3px -3px 3px #06d6a0ff,
-               3px  3px 3px #06d6a0ff;
+  box-shadow: 
+    -3px -3px 3px #06d6a0ff,
+    -3px 3px 3px #06d6a0ff,
+    3px -3px 3px #06d6a0ff,
+    3px 3px 3px #06d6a0ff;
 } */
 
 #pixel-board {
