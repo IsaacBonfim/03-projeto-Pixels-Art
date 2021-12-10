@@ -1,8 +1,11 @@
 const board = document.getElementById('pixel-board');
+
 const valorBase = document.querySelector('#base');
 
 function ampliaTabela(evento) {
   localStorage.setItem('valorBase.value', evento.target.value);
+
+  window.location.reload();
 }
 
 const valorStorage = localStorage.getItem('valorBase.value');
