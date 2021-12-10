@@ -43,3 +43,33 @@ window.onload = criaTabela();
 
 valorBase.addEventListener('click', ampliaTabela);
 valorBase.addEventListener('keyup', ampliaTabela);
+
+const cores = document.querySelectorAll('.color');
+
+function selecaoDeCores(evento) {
+  const cor = evento.target;
+
+  for (let i = 0; i < cores.length; i += 1) {
+    cores[i].className = 'color';
+  }
+
+  cor.className = 'color selected';
+}
+
+for (let i = 0; i < cores.length; i += 1) {
+  cores[i].addEventListener('click', selecaoDeCores);
+}
+
+const pixels = document.querySelectorAll('.pixel');
+
+function colorir(evento) {
+  const cor = document.getElementsByClassName('selected');
+  const pixel = evento.target;
+
+  console.log(cor);
+  console.log(pixel);
+}
+
+for (let i = 0; i < pixels.length; i += 1) {
+  pixels[i].addEventListener('click', colorir);
+}
