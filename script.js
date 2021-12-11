@@ -2,13 +2,13 @@ const board = document.getElementById('pixel-board');
 
 const valorBase = document.querySelector('#base');
 
+const valorStorage = localStorage.getItem('valorBase.value');
+
 function ampliaTabela(evento) {
   localStorage.setItem('valorBase.value', evento.target.value);
 
   window.location.reload();
 }
-
-const valorStorage = localStorage.getItem('valorBase.value');
 
 function inicializaBase() {
   if (valorStorage !== null) {
@@ -45,31 +45,48 @@ valorBase.addEventListener('click', ampliaTabela);
 valorBase.addEventListener('keyup', ampliaTabela);
 
 const cores = document.querySelectorAll('.color');
+const pixels = document.getElementsByClassName('pixel');
+
+function corInicial() {
+  const corIni = document.getElementsByClassName('selected');
+
+  sessionStorage.setItem('Background', corIni[0].style.backgroundColor);
+}
+
+window.onload = corInicial;
 
 function selecaoDeCores(evento) {
   const cor = evento.target;
 
   for (let i = 0; i < cores.length; i += 1) {
-    cores[i].className = 'color';
+    cores[i].classList.remove('selected');
   }
 
-  cor.className = 'color selected';
+  cor.classList.add('selected');
+  sessionStorage.setItem('Background', evento.target.style.backgroundColor);
 }
 
 for (let i = 0; i < cores.length; i += 1) {
   cores[i].addEventListener('click', selecaoDeCores);
 }
 
-const pixels = document.querySelectorAll('.pixel');
-
 function colorir(evento) {
-  const cor = document.getElementsByClassName('selected');
-  const pixel = evento.target;
+  const pix = evento.target;
 
-  console.log(cor);
-  console.log(pixel);
+  pix.style.backgroundColor = sessionStorage.getItem('Background');
 }
 
 for (let i = 0; i < pixels.length; i += 1) {
   pixels[i].addEventListener('click', colorir);
 }
+
+// ^ Configuração do botão para recarregar as configurações padrão.
+const botao = document.getElementById('clear-board');
+
+function limpaStorage() {
+  sessionStorage.clear();
+
+  window.location.reload();
+}
+
+botao.addEventListener('click', limpaStorage);
