@@ -162,7 +162,7 @@ li.color:nth-of-type( 4 ) {
   width: 40px;
 }
 
-#clear-board {
+button#clear-board {
   display: flex;
   justify-content: center;
   margin-left: auto;
