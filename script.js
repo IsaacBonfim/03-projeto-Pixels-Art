@@ -6,7 +6,7 @@ const botaoTamanho = document.getElementById('generate-board');
 function aumentaTamanho() {
   if (valorBase.value === '') {
     window.alert('Board inválido!');
-  } else if (valorBase.value >= 1 && valorBase.value < 5) {
+  } else if (valorBase.value >= 0 && valorBase.value < 5) {
     localStorage.setItem('Board', 5);
   } else if (valorBase.value > 50) {
     localStorage.setItem('Board', 50);
@@ -20,11 +20,16 @@ function aumentaTamanho() {
 botaoTamanho.addEventListener('click', aumentaTamanho);
 
 function inicializaBase() {
-  if (valorStorage !== null) {
+  let base = 0;
+
+  if (valorStorage === null) {
+    base = 5;
+  } else {
     valorBase.value = valorStorage;
+    base = valorStorage;
   }
 
-  return valorBase.value;
+  return base;
 }
 
 function criaTabela() {
