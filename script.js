@@ -1,14 +1,17 @@
 const board = document.getElementById('pixel-board');
-
-const valorBase = document.querySelector('#base');
-
+const valorBase = document.querySelector('#board-size');
 const valorStorage = localStorage.getItem('valorBase.value');
+const botaoTamanho = document.getElementById('generate-board');
 
 function ampliaTabela(evento) {
   localStorage.setItem('valorBase.value', evento.target.value);
+}
 
+function aumentaTamanho() {
   window.location.reload();
 }
+
+botaoTamanho.addEventListener('click', aumentaTamanho);
 
 function inicializaBase() {
   if (valorStorage !== null) {

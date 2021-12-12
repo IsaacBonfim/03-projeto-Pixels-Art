@@ -27,8 +27,6 @@
     <main>
 
       <div id ="paleta">
-
-        <div id="aux"></div>
       
         <ul id="color-palette">
           <li class="color selected" style="background-color: #000;"></li>
@@ -37,17 +35,18 @@
           <li class="color" style="background-color: #ffd166ff;"></li>
           <!-- <li class="color"></li> -->
         </ul>
-        
-        <section id='tamanhoBase'>
-
-          <h4>Tamanho do quadro</h4>
-          <input id="base" type="number" min="5" max="50" value="5"> 
-        
-        </section>
 
       </div>
       
-      <button id="clear-board">Limpar</button>
+      <section id='botoes'>
+        
+        <button id="clear-board">Limpar</button>
+
+        <input id="board-size" type="number" min="5" max="50" value="5">
+        <button id="generate-board">VQV</button>
+      
+      
+      </section>
       
       <div id="pixel-board"></div>
 

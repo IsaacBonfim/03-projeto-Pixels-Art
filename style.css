@@ -6,9 +6,6 @@ CSS HEX
 --caribbean-green: #06d6a0ff;
 --baby-powder: #fffcf9ff;
 
-font-family: 'Fuzzy Bubbles', cursive;
-font-family: 'Smooch', cursive;
-
 1366 x 768 */
 
 body {
@@ -48,10 +45,7 @@ header {
   list-style: none;
   background-color: #fffcf9ff;
   width: 500px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 10px;
   border-style: solid;
   border-width: 3px;
   border-color: #06d6a0ff;
@@ -60,38 +54,23 @@ header {
   box-shadow: 3px 3px 3px #ffd166ff;
 }
 
-#tamanhoBase {
-  vertical-align: top;
-  width: 15%;
-  float: right; 
+#botoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-h4 {
-  vertical-align: top;
-  text-align: right;
-  font-family: 'Fuzzy Bubbles', cursive;
-  color: #06d6a0ff;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  margin-right: 30px;
-}
-
-#base {
+#board-size {
   display: inline-block;
-  vertical-align: top;
   width: 50px;
-  margin-top: auto;
-  margin-left: 35%;
+  height: 15px;
+  margin-right: 10px;
+  margin-left: 50px;
   border-style: solid;
   border-width: 3px;
   border-color: #06d6a0ff;
   box-shadow: 3px 3px 3px #ffd166ff;
-}
-
-#aux {
-  vertical-align: top;
-  width: 15%;
-  float: left;
 }
 
 .color {
@@ -162,11 +141,8 @@ li.color:nth-of-type( 4 ) {
   width: 40px;
 }
 
-button#clear-board {
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+button {
+  margin-top: 10px;
   margin-bottom: 10px;
   font-family: 'Fuzzy Bubbles', cursive;
   font-weight: lighter;
@@ -180,7 +156,7 @@ button#clear-board {
   box-shadow: 3px 3px 3px #ffd166ff;
 }
 
-#clear-board:hover {
+button:hover {
   color: #ef476fff;
   border-color: #ef476fff;
   box-shadow: 
@@ -190,7 +166,7 @@ button#clear-board {
     3px 3px 3px #26547cff;
 }
 
-#clear-board:active {
+button:active {
   background-color: #26547cff;
   color: #ffd166ff;
   text-shadow: 1px 1px 1px #fffcf9ff;
