@@ -1,13 +1,19 @@
 const board = document.getElementById('pixel-board');
 const valorBase = document.querySelector('#board-size');
-const valorStorage = localStorage.getItem('valorBase.value');
+const valorStorage = localStorage.getItem('Board');
 const botaoTamanho = document.getElementById('generate-board');
 
-function ampliaTabela(evento) {
-  localStorage.setItem('valorBase.value', evento.target.value);
-}
-
 function aumentaTamanho() {
+  if (valorBase.value === '') {
+    window.alert('Board inválido!');
+  } else if (valorBase.value >= 1 && valorBase.value < 5) {
+    localStorage.setItem('Board', 5);
+  } else if (valorBase.value > 50) {
+    localStorage.setItem('Board', 50);
+  } else {
+    localStorage.setItem('Board', valorBase.value);
+  }
+
   window.location.reload();
 }
 
@@ -43,9 +49,6 @@ function criaTabela() {
 }
 
 window.onload = criaTabela();
-
-valorBase.addEventListener('click', ampliaTabela);
-valorBase.addEventListener('keyup', ampliaTabela);
 
 const cores = document.querySelectorAll('.color');
 const pixels = document.getElementsByClassName('pixel');
