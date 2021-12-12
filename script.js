@@ -6,6 +6,9 @@ const cores = document.querySelectorAll('.color');
 const coresRandom = document.querySelectorAll('.random');
 const pixels = document.getElementsByClassName('pixel');
 
+// O código para criar a função que gera as cores aleatórias eu consultei no site abaixo:
+// https://www.ti-enxame.com/pt/javascript/gerador-de-cores-aleatorias/967183954/
+
 function geraCores() {
   const aux = '0123456789ABCDEF';
   let cor = '#';
@@ -14,7 +17,7 @@ function geraCores() {
     cor += aux[Math.floor(Math.random() * 16)];
   }
 
-  return cor;
+  return `${cor}FF`;
 }
 
 function alocaCores() {
