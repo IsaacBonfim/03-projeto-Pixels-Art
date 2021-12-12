@@ -2,6 +2,29 @@ const board = document.getElementById('pixel-board');
 const valorBase = document.querySelector('#board-size');
 const valorStorage = localStorage.getItem('Board');
 const botaoTamanho = document.getElementById('generate-board');
+const cores = document.querySelectorAll('.color');
+const coresRandom = document.querySelectorAll('.random');
+const pixels = document.getElementsByClassName('pixel');
+
+function geraCores() {
+  const aux = '0123456789ABCDEF';
+  let cor = '#';
+
+  for (let i = 0; i < 6; i += 1) {
+    cor += aux[Math.floor(Math.random() * 16)];
+  }
+
+  return cor;
+}
+
+function alocaCores() {
+  for (let i = 0; i < coresRandom.length; i += 1) {
+    coresRandom[i].style.backgroundColor = geraCores();
+  }
+  return coresRandom;
+}
+
+window.onload = alocaCores();
 
 function aumentaTamanho() {
   if (valorBase.value === '') {
@@ -54,9 +77,6 @@ function criaTabela() {
 }
 
 window.onload = criaTabela();
-
-const cores = document.querySelectorAll('.color');
-const pixels = document.getElementsByClassName('pixel');
 
 function corInicial() {
   const corIni = document.getElementsByClassName('selected');

@@ -90,7 +90,7 @@ header {
     3px 3px 3px black;
 }
 
-.color:nth-of-type( 2 ) {
+/* .color:nth-of-type( 2 ) {
   background-color: #26547cff;
   box-shadow: -3px -3px 3px #26547cff,
     -3px 3px 3px #26547cff,
@@ -112,7 +112,7 @@ header {
     -3px 3px 3px #ffd166ff,
     3px -3px 3px #ffd166ff,
     3px 3px 3px #ffd166ff;
-}
+} */
 
 /* li.color:nth-of-type( 5 ) {
   background-color: #06d6a0ff;
