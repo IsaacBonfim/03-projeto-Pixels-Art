@@ -22,7 +22,13 @@ function geraCores() {
 
 function alocaCores() {
   for (let i = 0; i < coresRandom.length; i += 1) {
-    coresRandom[i].style.backgroundColor = geraCores();
+    const cor = geraCores();
+
+    coresRandom[i].style.backgroundColor = cor;
+    coresRandom[i].style.boxShadow = `${-3}px ${-3}px ${3}px ${cor}`;
+    coresRandom[i].style.boxShadow += `,${-3}px ${3}px ${3}px ${cor}`;
+    coresRandom[i].style.boxShadow += `,${3}px ${-3}px ${3}px ${cor}`;
+    coresRandom[i].style.boxShadow += `,${3}px ${3}px ${3}px ${cor}`;
   }
   return coresRandom;
 }
